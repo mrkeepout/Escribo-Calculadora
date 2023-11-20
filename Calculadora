@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+
+    <style>
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 100% da altura da viewport */
+            margin: 0; /* Remover margens padrão do corpo */
+        }
+
+        /* Realizar o redimensionamento do retangulo para diferentes telas*/
+        .container {  
+            display: grid;  
+            grid-template-columns: 100px 100px 100px;  
+            grid-template-rows: 150px 150px;  
+        }
+
+        /* Desenho do retangulo como fundo para a aplicação*/
+        .retangulo { 
+            width: 300%;
+            height: 200%;
+            box-align: center;
+            background-color: #73AB90; /* Cor de fundo do retângulo */
+            border-radius: 20px; /* Raio da borda arredondada */
+            padding: 20px; /* Espaçamento interno para melhor visualização */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 5px 10px 30px dimgrey;
+        }
+
+        /* Formatação dos titulos h1*/
+        .retangulo h1{ 
+            margin: 0;
+            font-size: 24px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Formatação dos 'labels' */
+        .retangulo label{ 
+            margin: 10px;
+            font-size: 20px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            
+        }
+
+        /* Formatação dos botões */
+        .retangulo button { 
+            background-color: #04AA6D; /* Green */
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+        }
+
+        /* Formatação dos botões */
+        .retangulo button:hover {
+            background-color: #ffffff;
+            color: #04AA6D;
+        }
+
+        /* Formatação das caixas de texto */
+        .retangulo input{
+            width: 190px;
+            height: 20px;
+            border-radius: 4px;
+            border: none;
+            margin: 10px;
+        }
+ 
+        /* Formatação dos 'paragrafos' */
+        .retangulo p{
+            margin: 20;
+            font-size: 15px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+
+    </style>
+
+    <title>Calculadora de Somatório</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="retangulo">
+
+            <h1>Calculadora de Somatório</h1>
+
+            <label for="numeroInput">Informe um número:</label>
+            <input type="number" id="numeroInput" placeholder="Digite um número">
+
+            <button onclick="calcularSomatorio()">Calcular Somatório</button>
+
+            <p id="resultado"></p>
+
+            <script>
+                // Funcao que permite o calculo do somatorio.
+                function somatorioDivisiveis3ou5(numero) {
+                    let somatorio = 0; // inicializada em 0, para garantir a integridade dos valores.
+
+                    //Realizacao do somatorio
+                    for (let i = 0; i < numero; i++) {
+                        if (i % 3 === 0 || i % 5 === 0) {
+                            somatorio += i;
+                        }
+                    }
+                    return somatorio; // retorna para a chamadora da funcao o resultado do somatorio.
+                }
+
+                // Funcao que realiza a entrada e saída dos dados para o usuário.
+                function calcularSomatorio() {
+                    const numeroInformado = parseInt(document.getElementById('numeroInput').value, 10);
+                    
+                    // Tratamento de erro em caso de inserir um dado inválido no form.
+                    if (isNaN(numeroInformado) || numeroInformado < 0) {
+                        alert('Por favor, insira um número válido.');
+                        return;
+                    }
+
+                    const resultado = somatorioDivisiveis3ou5(numeroInformado);
+                    document.getElementById('resultado').textContent = `O somatório dos valores     divisíveis por 3 ou 5 menores que ${numeroInformado} é ${resultado}`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
+
