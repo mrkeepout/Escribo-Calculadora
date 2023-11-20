@@ -22,6 +22,7 @@
  **Exemplo de navegação para o diretório no Mac/Unix e por fim, a execução:**
 
  cd /Users/username/Library/CloudStorage/Desktop/Escribo-Calculadora
+ 
  node calculadoraNode.js
 
 
