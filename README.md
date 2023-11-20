@@ -1,13 +1,13 @@
 # Escribo-Calculadora
  Projeto de desafio técnico por Gabriel Nascimento (mrkeepout).
 
- O projeto
+ ## O projeto
 
  Implementação de uma função que recebe um número inteiro positivo e retorna o somatório de todos os valores inteiros divisíveis por 3 ou 5, que sejam inferiores ao número passado.
 
  Para tornar mais flexível, implementei uma interface em navegador via HTML (calculadora.html) e outra diretamente por terminal via NodeJS (calculadoraNode.js). 
 
- Para executar
+ ## Para executar
 
  Para execução da aplicação, basta realizar o download da 'Calculadora.html' e abrir no navegador de sua preferência.
 
@@ -19,21 +19,21 @@
 
  node calculadoraNode.js
 
- Exemplo de navegação para o diretório no Mac/Unix e por fim, a execução:
+ **Exemplo de navegação para o diretório no Mac/Unix e por fim, a execução:**
 
  cd /Users/username/Library/CloudStorage/Desktop/Escribo-Calculadora
  node calculadoraNode.js
 
 
 
- Utilização versão HTML:
+ ## Utilização versão HTML:
 
  O programa irá solicitar ao usuário um valor positivo e inteiro. Para calcular, pressione o botão Calcular e aguarde o resultado.
 
- Utilização versão NodeJS:
+ ## Utilização versão NodeJS:
 
  O programa irá solicitar ao usuário, via linha de comando, um valor positivo e inteiro. Para calcular, pressione Enter e aguarde o resultado.
 
 
 
- Dúvidas, entre em contato comigo atráves do e-mail gabriellucas_mko@live.com
+ **Dúvidas, entre em contato comigo atráves do e-mail gabriellucas_mko@live.com**
